@@ -24,7 +24,7 @@ applyJoints=function(jointHandles,joints)
     for i=1,#jointHandles,1 do
         simSetJointPosition(jointHandles[i],joints[i])
     end
-end --(把每個值套用在各自設定)
+end --(把每個值套用在設定)
 
 
 getJoints=function(jointHandles,angles)
