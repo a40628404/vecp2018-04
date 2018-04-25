@@ -1,15 +1,14 @@
 function deg2rad(deg)
    return deg*math.pi/180
-end --(math.pi/180 = ¨¤«×´«Ñy«×)
-
+end --(math.pi/180 = è§’åº¦æ›å¼³åº¦)
 
 function rad2deg(rad)
    return rad*180/math.pi
-end --(180/math.pi = Ñy«×´«¨¤«×)
+end --(180/math.pi = å¼³åº¦æ›è§’åº¦)
 
 function nullFunc(arg)
    return arg
-end --(¼Æ­È¦^¶Ç)
+end --(æ•¸å€¼å›å‚³)
 
 function toggleRadians(ui,id,newVal)
    if (newVal==2) then
@@ -19,13 +18,13 @@ function toggleRadians(ui,id,newVal)
       angleTo = nullFunc
       angleFrom = nullFunc
    end	  
-end --(·ínullFunc=2ªº¸Ü¨¤«×Ñy«×¤¬Âà¡A¦pªGnullFunc~=2ªº¸Ü´N¤£°µ¨Æ)
+end --(ç•¶nullFunc=2çš„è©±è§’åº¦å¼³åº¦äº’è½‰ï¼Œå¦‚æœnullFunc~=2çš„è©±å°±ä¸åšäº‹)
 
 applyJoints=function(jointHandles,joints)
     for i=1,#jointHandles,1 do
         simSetJointPosition(jointHandles[i],joints[i])
     end
-end --(§â¨C­Ó­È®M¥Î¦b¦U¦Û³]©w)
+end --(æŠŠæ¯å€‹å€¼å¥—ç”¨åœ¨å„è‡ªè¨­å®š)
 
 
 getJoints=function(jointHandles,angles)
@@ -34,7 +33,7 @@ getJoints=function(jointHandles,angles)
       angles[i]=simGetJointPosition(jointHandles[i])
    end
    return angles
-end--(¨ú±ojoint¦^¶Çangles)
+end--(å–å¾—jointå›å‚³angles)
 
 updateActualText=function(jointHandles, angles)
    local ang_str="( "
@@ -256,7 +255,7 @@ if (sim_call_type==sim_childscriptcall_initialization) then
              <!-- <group> -->
                <label text="<big> Current SE(3) (world to end-effector):</big>" wordwrap="false" style="font-weight: bold;"/>
                <!-- <button text="Calculate SE(3) transform:" onclick="calcSE3" id="1235"/> -->
-               <label text="T(I¡M) = " wordwrap="false" />
+               <label text="T(Iï¹) = " wordwrap="false" />
                <label text="" id="1234" wordwrap="false" />
              <!-- </group> -->
               <!-- <group> -->
@@ -268,7 +267,7 @@ if (sim_call_type==sim_childscriptcall_initialization) then
              <!-- <group> -->
                <label text="<big> Current SE(3) (world to youBot base):</big>" wordwrap="false" style="font-weight: bold;"/>
                <!-- <button text="Calculate SE(3) transform:" onclick="calcSE3" id="1235"/> -->
-               <label text="T(I¡M) = " wordwrap="false" />
+               <label text="T(Iï¹) = " wordwrap="false" />
                <label text="" id="1235" wordwrap="false" />
              <!-- </group> -->
               <!-- <group> -->
