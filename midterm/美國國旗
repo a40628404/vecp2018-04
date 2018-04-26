@@ -48,7 +48,7 @@ ctx : lineTo(0 , si * 7 / 13)
 ctx : closePath()
 ctx : fill()
 
-用for迴圈畫出星星
+--用for迴圈畫出星星
 for i = 1,9 do
 for ii = 1,11 do
 if (i + ii) % 2 == 0 then
