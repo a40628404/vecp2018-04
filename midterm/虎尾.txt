@@ -2,34 +2,69 @@ local ctx = require "js".global.document:getElementById("canvas"):getContext("2d
 deg = math.pi / 180
 
 function star(radius, xc, yc, n)
-	xi = xc + radius*math.cos((360/n)*deg-60*deg)
-	yi = yc - radius*math.sin((360/n)*deg-60*deg)
-	ctx:beginPath()
-	ctx:moveTo(xi,yi)
-	for i = 2, n+1 do
-		x = xc + radius*math.cos((360/n)*deg*i-60*deg)
-		y = yc - radius*math.sin((360/n)*deg*i-60*deg)
-		ctx:lineTo(x,y)
-	end
+xi = xc + radius*math.cos((360/n)*deg-60*deg)
+yi = yc - radius*math.sin((360/n)*deg-60*deg)
+ctx:beginPath()
+ctx:moveTo(xi,yi)
+for i = 2, n+1 do
+x = xc + radius*math.cos((360/n)*deg*i-60*deg)
+y = yc - radius*math.sin((360/n)*deg*i-60*deg)
+ctx:lineTo(x,y)
+end
 end
 
 ctx.fillStyle = "rgb(0,0,255)"
-	star(300, 300, 150, 6)
+star(300, 300, 150, 6)
 ctx:fill()
 
 ctx.fillStyle = "rgb(255,255,255)"
-	star(200, 300, 150, 6)
+star(200, 300, 150, 6)
 ctx:fill()
 
 ctx.fillStyle = "rgb(0,0,255)"
-	star(100, 300, 150, 36)
+star(100, 300, 150, 36)
 ctx:fill()
 
 ctx.fillStyle = "rgb(255,255,255)"
-	ctx : beginPath()
-	ctx : moveTo(200 , 0)
-	ctx : lineTo(400 , 200)
-	ctx : lineTo(400 , 300)
-	ctx : lineTo(200 , 100)
-	ctx : closePath()
+ctx : beginPath()
+ctx : moveTo(200 , 0)
+ctx : lineTo(400 , 200)
+ctx : lineTo(400 , 300)
+ctx : lineTo(200 , 100)
+ctx : closePath()
+ctx : fill()
+local ctx = require "js".global.document:getElementById("canvas"):getContext("2d")
+deg = math.pi / 180
+
+function star(radius, xc, yc, n)
+xi = xc + radius*math.cos((360/n)*deg-60*deg)
+yi = yc - radius*math.sin((360/n)*deg-60*deg)
+ctx:beginPath()
+ctx:moveTo(xi,yi)
+for i = 2, n+1 do
+x = xc + radius*math.cos((360/n)*deg*i-60*deg)
+y = yc - radius*math.sin((360/n)*deg*i-60*deg)
+ctx:lineTo(x,y)
+end
+end
+
+ctx.fillStyle = "rgb(0,0,255)"
+star(300, 300, 150, 6)
+ctx:fill()
+
+ctx.fillStyle = "rgb(255,255,255)"
+star(200, 300, 150, 6)
+ctx:fill()
+
+ctx.fillStyle = "rgb(0,0,255)"
+star(100, 300, 150, 36)
+ctx:fill()
+
+ctx.fillStyle = "rgb(255,255,255)"
+ctx : beginPath()
+ctx : moveTo(200 , 0)
+ctx : lineTo(400 , 200)
+ctx : lineTo(400 , 300)
+ctx : lineTo(200 , 100)
+ctx : closePath()
 ctx : fill()
