@@ -1,7 +1,9 @@
+-- 導入 "js" 模組
 local ctx = require "js".global.document:getElementById("canvas"):getContext("2d")
 deg = math.pi / 180
 si = 315
 
+--星星中間的座標
 function star(xi , yi)
 x = xi + si * 0.01565 * math.cos(54 * deg)
 y = yi - si * 0.01565 * math.sin(54 * deg)
@@ -15,6 +17,7 @@ end
 ctx : closePath()
 end
 
+--背景長方形的座標
 function rectangle(yi)
 ctx : beginPath()
 ctx : moveTo(0 , yi)
@@ -24,6 +27,7 @@ ctx : lineTo(0 , yi + si / 13)
 ctx : closePath()
 end
 
+--用for迴圈畫出13條線並且給顏色
 for i = 0,12 do
 if i % 2 == 0 then
 ctx.fillStyle = "rgb(178,34,52)"
@@ -34,6 +38,7 @@ rectangle(i * si / 13)
 ctx : fill()
 end
 
+--畫出藍色背景
 ctx.fillStyle = "rgb(60,59,110)"
 ctx : beginPath()
 ctx : moveTo(0 , 0)
@@ -43,6 +48,7 @@ ctx : lineTo(0 , si * 7 / 13)
 ctx : closePath()
 ctx : fill()
 
+用for迴圈畫出星星
 for i = 1,9 do
 for ii = 1,11 do
 if (i + ii) % 2 == 0 then
